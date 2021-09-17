@@ -35,14 +35,14 @@ Router.post("/signup", async (req, res) => {
 });
 /*
 Route   /signin
-Des     Signin with email password
+Des     Signin with email and password
 Params  none
 Access  Public
 Method  POST
 */
 Router.post("/signin", async (req, res) => {
   try {
-    const user = await UserModel.findByEmailAndPhone(req.body.credentials);
+    const user = await UserModel.findByEmailAndPassword(req.body.credentials);
     // generate JWT auth token
     const token = user.generateJwtToken();
 
