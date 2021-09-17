@@ -7,7 +7,6 @@ import passport from "passport";
 // Models
 import { UserModel } from "../../database/user";
 
-
 const Router = express.Router();
 
 /*
@@ -81,8 +80,8 @@ Router.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
-    return res.redirect(
-      `http://localhost:3000/google/${req.session.passport.user.token}`
+    return res.json(
+    {token:req.session.passport.user.token}
     );
   }
 );
