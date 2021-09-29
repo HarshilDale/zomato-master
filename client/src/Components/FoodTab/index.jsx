@@ -20,7 +20,7 @@ const MobileTabs = () => {
     {
       id: `night`,
       icon: <BiDrink />,
-      name: "Night life",
+      name: "Nightlife",
     },
     {
       id: `nutri`,
@@ -85,7 +85,7 @@ const LargeTabs = () => {
         "https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png",
       imageActive:
         "https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png",
-      name: "Night life",
+      name: "Nightlife",
       activeColor: "purple",
     },
     {
@@ -102,7 +102,7 @@ const LargeTabs = () => {
   const { type } = useParams();
   return (
     <>
-      <div className="hidden lg:flex container px-20 mx-auto gap-14">
+      <div className="hidden lg:flex container px-20 my-8 mx-auto gap-14">
         {allTypes.map((items) => (
           <Link to={`/${items.id}`}>
             <div
