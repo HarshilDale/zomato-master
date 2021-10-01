@@ -18,7 +18,7 @@ const Delivery = () => {
       isPro: true,
       isOff: 80,
       durationOfdelivery: 47,
-      restaurantReviewValue:4.1,
+      restaurantReviewValue: 4.1,
     },
     {
       _id: "123456",
@@ -31,7 +31,7 @@ const Delivery = () => {
       isPro: true,
       isOff: 80,
       durationOfdelivery: 47,
-      restaurantReviewValue:4.1,
+      restaurantReviewValue: 4.1,
     },
     {
       _id: "123456",
@@ -44,7 +44,7 @@ const Delivery = () => {
       isPro: true,
       isOff: 80,
       durationOfdelivery: 47,
-      restaurantReviewValue:4.1,
+      restaurantReviewValue: 4.1,
     },
   ]);
   return (

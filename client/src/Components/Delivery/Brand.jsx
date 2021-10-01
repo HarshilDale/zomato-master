@@ -18,18 +18,22 @@ const Brand = (props) => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
 
   return (
-    <div className="my-5 mb-13">
+    <div className="my-5 mb-32">
       <Slider {...settings}>
         {logos.map((logos) => (
           <div className="w-32 h-48 mx-10 bg-white shadow">
-            <img src={logos} alt="brand" className="w-full h-full object-cover" />
+            <img
+              src={logos}
+              alt="brand"
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
       </Slider>

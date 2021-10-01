@@ -4,7 +4,7 @@ const DeliverySmCard = ({image,title}) => {
   return (
     <>
       <div className="lg:hidden bg-white shadow rounded-md w-24 md:w-56">
-        <div className="w-full h-20">
+        <div className="w-full h-24">
           <img
             src={image}
             alt="food"
