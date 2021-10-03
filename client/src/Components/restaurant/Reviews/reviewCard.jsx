@@ -35,24 +35,7 @@ const ReviewCard = () => {
           </div>
           <div className="w-full">
             <p className="w-full text-gray-600 font-light text-base">
-              I experienced a delicious main course and caring staff—but pity
-              about the French fries. I visited for lunch with a friend. We were
-              delighted by the authentic South Indian main course. The spices
-              and flavors were extremely impressive for a vegetarian restaurant.
-              They looked tasty, but we discovered they were undercooked and too
-              oily. We left most of them untouched. For $15, the quality should
-              have been much higher. When the waiter visited our table and asked
-              if something was wrong, we explained that we didn’t like the
-              French fries. He was apologetic and said, “We’re sorry for your
-              experience with the French fries; we hope you liked the main
-              course." We said yes we had. He was sympathetic and offered us a
-              discount on the price of the French fries. We left a tip on the
-              table and exited the restaurant with a smile. Overall, I enjoyed
-              our experience. They did take the time to make the table ready,
-              the main course was good, the staff was caring, but the French
-              fries were awful. I’d love to visit again. I'd recommend it as a
-              nice place to go with friends, family, or a partner. Do try their
-              famous masala dosa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, blanditiis voluptatibus possimus iste itaque, labore asperiores eligendi repudiandae incidunt aut magnam facilis veritatis consequatur voluptate consequuntur, cum amet recusandae. Illo?
             </p>
           </div>
         </div>
