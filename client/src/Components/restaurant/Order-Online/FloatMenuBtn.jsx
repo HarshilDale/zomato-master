@@ -20,7 +20,7 @@ const FloatMenuBtn = () => {
         )}
         <button
           onClick={toggleMenu}
-          className="text-white flex items-center gap-2 bg-zomato-700 px-3 py-2 rounded-full md:hidden"
+          className="text-white flex items-center gap-2 bg-zomato-00 px-3 py-2 rounded-full md:hidden"
         >
           {isClicked ? <MdClose /> : <HiMenu />} Menu
         </button>

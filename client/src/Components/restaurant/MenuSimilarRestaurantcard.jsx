@@ -5,7 +5,7 @@ const MenuSimilarRestaurantcard = (props) => {
   return (
     <div className="mx-2">
       <div className=" bg-white shadow rounded-md ">
-        <div className="w-full h-48">
+        <div className="w-full h-48 ">
           <img
             src={props.image}
             alt="food"
