@@ -16,7 +16,7 @@ const RestaurantInfo = (props) => {
               </span>
               <span>
                 <strong>2</strong>
-                <p className="border-dashed border-b">Dining reviews</p>
+                <p className="border-dashed border-b border-green-200">Dining reviews</p>
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -26,7 +26,7 @@ const RestaurantInfo = (props) => {
               </span>
               <span>
                 <strong>2</strong>
-                <p className="border-dashed border-b">Deliery reviews</p>
+                <p className="border-dashed border-b border-green-200">Delivery reviews</p>
               </span>
             </div>
           </div>
