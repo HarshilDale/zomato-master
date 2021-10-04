@@ -21,7 +21,7 @@ const ReviewCard = () => {
               </small>
             </div>
           </div>
-          <button className="text-zomato-400 border border-zomato-400 py-2 px-4 rounded-lg">
+          <button className="text-zomato-400 border border-zomato-400 py-2 px-4 rounded-lg hover:bg-zomato-50">
             Follow
           </button>
         </div>

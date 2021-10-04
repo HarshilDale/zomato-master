@@ -40,36 +40,6 @@ const OrderOnline = () => {
                 },
               ]}
             />
-            <FoodList
-              title="Special Lunch Pack / Dinner Pack"
-              items={[
-                {
-                  image:
-                    "https://b.zmtcdn.com/data/dish_photos/6f7/b510afbca3b5fcc922542a69dd5ca6f7.jpg?fit=around|130:130&crop=130:130;*,*",
-
-                  price: "230",
-                  rating: 4,
-                  description:
-                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt laborum esse alias ipsam culpa aliquam dicta! Delectus, voluptate illo? Vero voluptate veniam autem debitis illum, ipsam ducimus expedita labore amet.",
-                  title: "Special Lunch Pack",
-                },
-              ]}
-            />
-            <FoodList
-              title="Main Course"
-              items={[
-                {
-                  image:
-                    "https://b.zmtcdn.com/data/dish_photos/116/b277323e0690869c7a46055b0e9ea116.jpg?fit=around|130:130&crop=130:130;*,*",
-
-                  price: "195",
-                  rating: 3,
-                  description:
-                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt laborum esse alias ipsam culpa aliquam dicta! Delectus, voluptate illo? Vero voluptate veniam autem debitis illum, ipsam ducimus expedita labore amet.",
-                  title: "Palak Paneer",
-                },
-              ]}
-            />
           </section>
         </div>
       </div>
