@@ -16,14 +16,14 @@ import Mapview from "../../Components/restaurant/Mapview";
 
 const Overview = () => {
   const { id } = useParams();
-  
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    initialSlide:0,
+    initialSlide: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -53,7 +53,6 @@ const Overview = () => {
       },
     ],
   };
-
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
@@ -188,12 +187,14 @@ const Overview = () => {
               </button>
             </div>
           </div>
-          <Mapview
-            title="Shree Gurukripa"
-            phno="+917314994677"
-            mapLocation={[22.71445098119874, 75.86895520270402]}
-            address="13, Chhoti Gwaltoli, Sarwate Bus Stand, Indore"
-          />
+          <div className="my-4 w-full  md:hidden flex flex-col gap-4">
+            <Mapview
+              title="Shree Gurukripa"
+              phno="+917314994677"
+              mapLocation={[22.71445098119874, 75.86895520270402]}
+              address="13, Chhoti Gwaltoli, Sarwate Bus Stand, Indore"
+            />
+          </div>
         </aside>
       </div>
     </>

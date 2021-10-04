@@ -28,7 +28,7 @@ const ReviewCard = () => {
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <span className="text-white text-xs bg-green-700 px-2 py-1 rounded-lg flex items-center gap-1">
-              3 <TiStarFullOutline />
+              3.2 <TiStarFullOutline />
             </span>
             <h5 className="font-regular uppercase">Delivery</h5>
             <small className="text-gray-500">3 days ago</small>
