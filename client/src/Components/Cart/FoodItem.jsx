@@ -9,7 +9,7 @@ const FoodItem = (props) => {
           <small>₹{parseInt(props.price) * parseInt(props.quantity)}</small>
           <div className="px-1 bg-zomato-400 text-white rounded flex items-center gap-1">
             <button className="p-1 bg-zomato-400 text-white rounded">-</button>
-            <small>1</small>
+            <small>3</small>
             <button className="p-1 bg-zomato-400 text-white rounded">+</button>
           </div>
         </div>
