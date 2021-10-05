@@ -7,7 +7,6 @@ const MenuCollection = (props) => {
   const closeViewer = () => setIsMenuOpen(false);
   const openViewer = () => setIsMenuOpen(true);
 
-
   return (
     <>
       {isMenuOpen && (
