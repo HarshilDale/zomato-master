@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 // components
 import DeliveryCarousal from "./DeliveryCarousal";
@@ -6,47 +7,15 @@ import Brand from "./Brand";
 import RestaurantCard from "../RestaurantCard";
 
 const Delivery = () => {
-  const [restaurantList, setRestaurantList] = useState([
-    {
-      _id: "123456",
-      photos: [
-        "https://b.zmtcdn.com/data/pictures/chains/9/1401979/133a4b906f9704eb6122caab14f96064_o2_featured_v2.jpg?output-format=webp",
-      ],
-      name: "Shree Gurukripa",
-      cuisine: ["Street Food", "Beverages", "Tea"],
-      averageCost: 100,
-      isPro: true,
-      isOff: 80,
-      durationOfdelivery: 47,
-      restaurantReviewValue: 4.1,
-    },
-    {
-      _id: "123456",
-      photos: [
-        "https://b.zmtcdn.com/data/pictures/chains/9/1401979/133a4b906f9704eb6122caab14f96064_o2_featured_v2.jpg?output-format=webp",
-      ],
-      name: "Shree Gurukripa",
-      cuisine: ["Street Food", "Beverages", "Tea"],
-      averageCost: 100,
-      isPro: true,
-      isOff: 80,
-      durationOfdelivery: 47,
-      restaurantReviewValue: 4.1,
-    },
-    {
-      _id: "123456",
-      photos: [
-        "https://b.zmtcdn.com/data/pictures/chains/9/1401979/133a4b906f9704eb6122caab14f96064_o2_featured_v2.jpg?output-format=webp",
-      ],
-      name: "Shree Gurukripa",
-      cuisine: ["Street Food", "Beverages", "Tea"],
-      averageCost: 100,
-      isPro: true,
-      isOff: 80,
-      durationOfdelivery: 47,
-      restaurantReviewValue: 4.1,
-    },
-  ]);
+  const [restaurantList, setRestaurantList] = useState([]);
+
+  const reduxState = useSelector(
+    (globalStore) => globalStore.restaurant.restaurants
+  );
+useEffect(() => {
+  reduxState.restaurants && setRestaurantList(reduxState.restaurants);
+},[reduxState.restaurants]);
+
   return (
     <>
       <DeliveryCarousal />
