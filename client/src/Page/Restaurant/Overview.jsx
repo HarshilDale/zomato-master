@@ -167,51 +167,12 @@ const Overview = () => {
           style={{ height: "fit-content" }}
           className="hidden md:flex md:w-4/12 sticky top-2 bg-white p-3 shadow-md flex flex-col gap-4 rounded-xl"
         >
-          <div>
-            <h4 className="text-xl font-medium">Call</h4>
-            <h5 className="text-zomato-400 font-medium">+917314994677</h5>
-          </div>
-          <div>
-            <h4 className="text-xl font-medium">Direction</h4>
-            <div className="w-full h-48">
-              <MapContainer
-                center={[22.71445098119874, 75.86895520270402]}
-                zoom={13}
-                scrollWheelZoom={false}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={[22.71445098119874, 75.86895520270402]}>
-                  <Popup>
-                    Guru Kripa hotel, Chhoti Gwaltoli, <br /> Indore, Madhya
-                    Pradesh 452001
-                  </Popup>
-                </Marker>
-              </MapContainer>
-            </div>
-            <p>13, Chhoti Gwaltoli, Sarwate Bus Stand, Indore</p>
-            <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 px-3 py-2 text-gray-700 border border-gray-400 rounded-lg">
-                <MdContentCopy /> Copy
-              </button>
-              <button className="flex items-center gap-2 px-3 py-2 text-gray-700 border border-gray-400 rounded-lg">
-                <span className="text-zomato-400">
-                  <FaDirections />
-                </span>
-                Direction
-              </button>
-            </div>
-          </div>
-          <div className="my-4 w-full  md:hidden flex flex-col gap-4">
-            <Mapview
-              title={reduxState?.name}
-              phno={`+91${reduxState?.contactNumber}`}
-              mapLocation={getLatLong(reduxState?.mapLocation)}
-              address={reduxState?.address}
-            />
-          </div>
+          <Mapview
+            title={reduxState?.name}
+            phno={`+91${reduxState?.contactNumber}`}
+            mapLocation={getLatLong(reduxState?.mapLocation)}
+            address={reduxState?.address}
+          />
         </aside>
       </div>
     </>
