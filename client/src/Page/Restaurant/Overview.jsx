@@ -62,18 +62,26 @@ const Overview = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if(reduxState) {
-    dispatch(getImage(reduxState?.menuImage)).then((data) => {
-      const images = [];
-      data.payload.image.images.map(({location})=>images.push(location));
-      setMenuImages(images);
-    });
-  }
- }, []);
+    if (reduxState) {
+      dispatch(getImage(reduxState?.menuImage)).then((data) => {
+        const images = [];
+        data.payload.image.images.map(({ location }) => images.push(location));
+        setMenuImages(images);
+      });
+    }
+  }, []);
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
+
+  const getLatLong = (mapAddress) => {
+    return mapAddress?.split(",").map((item) => parseFloat(item));
+  };
+
+  console.log(
+    reduxState?.mapLocation?.split(",").map((item) => parseFloat(item))
+  );
 
   return (
     <>
@@ -92,24 +100,20 @@ const Overview = () => {
             </Link>
           </div>
           <div className="flex flex-wrap gap-3 my-4">
-          <MenuCollection menuTitle="Menu" pages="3" image={menuImage} />
+            <MenuCollection menuTitle="Menu" pages="3" image={menuImage} />
           </div>
           <h4 className="text-lg font-medium my-4">Cuisines</h4>
           <div className="flex flex-wrap gap-2">
-            <span className="border border-gray-500 text-blue-500 px-2 py-1 rounded-full">
-              Street Food
-            </span>
-            <span className="border border-gray-500 text-blue-500 px-2 py-1 rounded-full">
-              North Indian
-            </span>
-            <span className="border border-gray-500 text-blue-500 px-2 py-1 rounded-full">
-              Fast Food
-            </span>
+            {reduxState?.cuisine.map((data) => (
+              <span className="border border-gray-600 text-blue-600 px-2 py-1 rounded-full">
+                {data}
+              </span>
+            ))}
           </div>
-          <div className="">
+          <div>
             <h4 className="text-lg font-medium">Average Cost</h4>
             <div className="my-4">
-              <h6>₹500 for two people (approx.)</h6>
+              <h6>₹{reduxState?.averageCost} for two people (approx.)</h6>
               <small className="text-gray-500">
                 Exclusive of applicable taxes and charges, if any
               </small>
@@ -147,10 +151,10 @@ const Overview = () => {
           </div>
           <div className="my-4 w-full md:hidden flex flex-col gap-4">
             <Mapview
-              title="Shree Gurukripa"
-              phno="+917314994677"
-              mapLocation={[22.71445098119874, 75.86895520270402]}
-              address="13, Chhoti Gwaltoli, Sarwate Bus Stand, Indore"
+              title={reduxState?.name}
+              phno={`+91${reduxState?.contactNumber}`}
+              mapLocation={getLatLong(reduxState?.mapLocation)}
+              address={reduxState?.address}
             />
           </div>
           <div className="my-4 flex flex-col gap-4">
@@ -202,10 +206,10 @@ const Overview = () => {
           </div>
           <div className="my-4 w-full  md:hidden flex flex-col gap-4">
             <Mapview
-              title="Shree Gurukripa"
-              phno="+917314994677"
-              mapLocation={[22.71445098119874, 75.86895520270402]}
-              address="13, Chhoti Gwaltoli, Sarwate Bus Stand, Indore"
+              title={reduxState?.name}
+              phno={`+91${reduxState?.contactNumber}`}
+              mapLocation={getLatLong(reduxState?.mapLocation)}
+              address={reduxState?.address}
             />
           </div>
         </aside>
